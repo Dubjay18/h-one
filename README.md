@@ -1,6 +1,6 @@
 # Project h-one
 
-One Paragraph of project description goes here
+This project is a Go-based web server that provides weather information based on the client's IP address. It uses the Gin framework for handling HTTP requests and responses.
 
 ## Getting Started
 
