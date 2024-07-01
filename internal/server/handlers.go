@@ -12,6 +12,7 @@ func (s *Server) DisplayDetailsHandler(c *gin.Context) {
 	if visitorName == "" {
 		visitorName = "Guest"
 	}
+
 	location, err := GetLocationFromIP(ip)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
