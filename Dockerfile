@@ -20,4 +20,4 @@ RUN make build
 EXPOSE 8000
 
 # Define the command to run the app when the container starts
-CMD ["/app/cmd/api/main"]
+CMD ["make", "run"]
