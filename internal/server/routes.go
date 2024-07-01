@@ -1,6 +1,7 @@
 package server
 
 import (
+	geo "github.com/cjgiridhar/gin-geo"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -8,8 +9,9 @@ import (
 
 func (s *Server) RegisterRoutes() http.Handler {
 	r := gin.Default()
-
+	r.Use(geo.Default("github.com/cjgiridhar/gin-geo/db/GeoLite2-City.mmdb"))
 	r.GET("/", s.HelloWorldHandler)
+	r.GET("/api/hello", s.DisplayDetailsHandler)
 
 	return r
 }
